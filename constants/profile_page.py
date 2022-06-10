@@ -15,12 +15,12 @@ class ProfilePageConstants(BaseConstants):
     INPUT_EMAIL_XPATH = ".//input[@maxlength='70']"
     INPUT_PASSWORD_XPATH = ".//input[@id='plaintextPassword.first']"
     INPUT_PASSWORD_REPEAT_XPATH = ".//input[@id='plaintextPassword.second']"
-    TERMS_CHECKBOX_XPATH = "/html/body/div[1]/main/div/div/div[2]/div[2]/div[2]/form/div[7]/div[1]" #.//input[@name='agreement.terms']"
-    #  ".//p[text()='Погоджуюсь з ']"
+
+    # TODO: catch checkbox locator:
+    TERMS_CHECKBOX_XPATH = ".//p[text()='Погоджуюсь з Правилами магазину*']"
     CONFIRM_ACCOUNT_CREATION_BUTTON_XPATH = ".//button[text()='Створити Акаунт']"
 
     #  user's profile
-    # CLOSE_MAILING_POPUP_XPATH =
     LOGOUT_ICON_XPATH = "//*[@id='Icon/Logout']"
     REGISTERED_USER_PROFILE_XPATH = "//*[@id='user-(7)']"
 

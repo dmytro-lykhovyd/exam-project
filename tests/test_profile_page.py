@@ -42,7 +42,7 @@ class TestProfilePage:
             - Press 'Create account' button
             - Verify successful registration
         """
-        profile_page.accept_all_cookies()
+
         profile_page.go_to_profile_page()
         profile_page.verify_profile_page_is_open()
         profile_page.open_account_form()

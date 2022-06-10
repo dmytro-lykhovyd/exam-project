@@ -37,11 +37,11 @@ class BasePage:
         assert not self.is_element_exists(locator=self.constants.ACCEPT_ALL_COOKIES_XPATH)
 
     def wait_until_clickable(self, locator: str) -> WebElement:
-        """waits until element become clickable"""
+        """waits until element becomes clickable"""
         return self.waiter.until(method=expected_conditions.element_to_be_clickable((By.XPATH, locator)))
 
     def wait_until_displayed(self, locator: str) -> WebElement:
-        """waits until element become displayed"""
+        """waits until element becomes displayed"""
         return self.waiter.until(method=expected_conditions.visibility_of_element_located((By.XPATH, locator)))
 
     def is_element_exists(self, locator: str) -> bool:
