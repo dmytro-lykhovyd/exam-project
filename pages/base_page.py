@@ -1,6 +1,5 @@
 import random
 import string
-from typing import List
 
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.webdriver import WebDriver
@@ -8,13 +7,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from constants import base
 from constants.base import BaseConstants
 
 
 class BasePage:
     """Base Page Object"""
-
     def __init__(self, driver):
         self.driver: WebDriver = driver
         driver.maximize_window()
@@ -62,10 +59,7 @@ class BasePage:
         """Find and Click on button"""
         self.wait_until_clickable(locator).click()
 
-    def retry(exceptions=Exception, tries=5, delay=0.25, max_delay=1, backoff=1):
+    def retry(self, tries="", delay="", max_delay="", backoff=""):
         """Retry method"""
 
 
-    # def check_radio_button(self, locator: str):
-    #     """Find and check radiobutton"""
-    #     self.wait_until_clickable(locator)

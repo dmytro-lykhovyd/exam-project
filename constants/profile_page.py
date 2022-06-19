@@ -17,10 +17,9 @@ class ProfilePageConstants(BaseConstants):
     INPUT_PASSWORD_REPEAT_XPATH = ".//input[@id='plaintextPassword.second']"
 
     # TODO: catch checkbox locator:
-    TERMS_CHECKBOX_XPATH = ".//p[text()='Погоджуюсь з Правилами магазину*']"
+    TERMS_CHECKBOX_XPATH = "//*[@id='root']/main/div/div/div[2]/div[2]/div[2]/form/div[7]/div[1]/div/div/div/div/label/span/p"
     CONFIRM_ACCOUNT_CREATION_BUTTON_XPATH = ".//button[text()='Створити Акаунт']"
 
     #  user's profile
     LOGOUT_ICON_XPATH = "//*[@id='Icon/Logout']"
     REGISTERED_USER_PROFILE_XPATH = "//*[@id='user-(7)']"
-

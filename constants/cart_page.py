@@ -1,8 +1,8 @@
-from constants.base import BaseConstants
 from constants.catalog_page import CatalogPageConstants
+from constants.message_presets import MessagePresets
 
 
-class CartPageConstants(CatalogPageConstants):
+class CartPageConstants(CatalogPageConstants, MessagePresets):
     # delivery type
     BUY_BUTTON_XPATH = ".//div[text()='Купити']"
     BUY_UNREGISTERED_BUTTON_XPATH = ".//div[text()='Покупка без реєстрації']"
@@ -20,10 +20,12 @@ class CartPageConstants(CatalogPageConstants):
     CITY = ".//input[@id='city']"
     PHONE = ".//input[@id='phone']"
     EMAIL = ".//input[@id='email']"
-    PAY_BUTTON_XPATH = ".//div[text()='Оплата']"
+    PAYMENT_BUTTON_XPATH = ".//div[text()='Оплата']"
 
     # paying process
     TOTAL_XPATH = ".//div[text()='Всього']"
     ORDER_PAY_XPATH = ".//div[text()='Замовляю/Сплачую']"  # for assertion only!
+    PURCHASE_REMARK_XPATH = ".//textarea[@id='purchaseRemark']"
+    CREATE_ACC_OPTIONAL_XPATH = ".//input[@id='plaintextPassword']"
 
-    
+

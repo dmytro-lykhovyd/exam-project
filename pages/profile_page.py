@@ -1,10 +1,8 @@
 from time import sleep
 
-from selenium.webdriver.common.by import By
-
 from constants.profile_page import ProfilePageConstants
 from pages.base_page import BasePage
-from pages.utils import User, log_wrapper, wait_until_ok
+from pages.utils import log_wrapper
 
 
 class ProfilePage(BasePage):
@@ -37,14 +35,13 @@ class ProfilePage(BasePage):
     @log_wrapper
     def create_account(self):
         """creates an account with random valid credentials"""
-        self.fill_field(locator=self.constants.INPUT_FIRSTNAME_XPATH, value='Vasia')
-        self.fill_field(locator=self.constants.INPUT_SURNAME_XPATH, value='Pupkin')
-        self.fill_field(locator=self.constants.INPUT_PHONE_XPATH, value='0234567890')
-        self.fill_field(locator=self.constants.INPUT_EMAIL_XPATH, value='fff@vv.ee')
-        self.fill_field(locator=self.constants.INPUT_PASSWORD_XPATH, value='123456AA')
-        self.fill_field(locator=self.constants.INPUT_PASSWORD_REPEAT_XPATH, value='123456AA')
-        self.wait_until_clickable(self.constants.TERMS_CHECKBOX_XPATH).click()
-        self.wait_until_clickable(locator=self.constants.CONFIRM_ACCOUNT_CREATION_BUTTON_XPATH).click()
+        self.fill_field(self.constants.INPUT_FIRSTNAME_XPATH, f"{self.random_str()}")
+        self.fill_field(self.constants.INPUT_SURNAME_XPATH, f"{self.random_str()}")
+        self.fill_field(self.constants.INPUT_PHONE_XPATH, f"0123{self.random_num()}")
+        self.fill_field(self.constants.INPUT_EMAIL_XPATH, f"{self.random_str()}@random.mail")
+        self.fill_field(self.constants.INPUT_PASSWORD_XPATH, "123456AA")
+        self.fill_field(self.constants.INPUT_PASSWORD_REPEAT_XPATH, "123456AA")
+        self.wait_until_clickable(self.constants.TERMS_CHECKBOX_XPATH).click()  # redirect to the shop rules, cannot check the checkbox
 
     @log_wrapper
     def verify_account_is_created(self):

@@ -1,14 +1,10 @@
 import logging
-from time import sleep
-import conftest
 
 import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
 
 from constants.base import BaseConstants
 from pages.profile_page import ProfilePage
-from pages.utils import User
-import conftest
 
 
 class TestProfilePage:
@@ -22,11 +18,7 @@ class TestProfilePage:
         yield ProfilePage(driver)
         driver.close()
 
-    @pytest.fixture(scope="function")
-    def user(self):
-        return User
-
-    def test_sign_up(self, profile_page, user):
+    def test_sign_up(self, profile_page):
         """
         - Preconditions:
             - Create driver
@@ -47,5 +39,4 @@ class TestProfilePage:
         profile_page.verify_profile_page_is_open()
         profile_page.open_account_form()
         profile_page.create_account()
-        # profile_page =
-        #  profile_page.verify_account_is_created()
+        profile_page.verify_account_is_created()

@@ -4,10 +4,6 @@ import random
 import string
 from time import sleep
 
-from selenium.webdriver.chrome.webdriver import WebDriver
-
-from constants.base import BaseConstants
-
 
 def random_num():
     """Generate random number"""
@@ -17,19 +13,6 @@ def random_num():
 def random_str(length=6):
     """Generate random string"""
     return ''.join(random.choice(string.ascii_letters) for _ in range(length))
-
-
-class User:
-
-    def __init__(self, firstname="", surname="", phone="", email="", password=""):
-        self.firstname = firstname if firstname else f"{random_str()}{random_num()}"
-        self.surname = surname if surname else f"{random_str()}{random_num()}"
-        self.phone = phone if phone else f"{1}{random_num()}"
-        self.email = email if email else f"{surname}@random.mail"
-        self.password = password if password else f"{random_str(6)}{random_num()}"
-
-    # def __str__(self):
-    #     return self
 
 
 def wait_until_ok(timeout: int, period: float):
