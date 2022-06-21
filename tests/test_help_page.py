@@ -1,6 +1,8 @@
 import logging
+
 import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
+
 from constants.base import BaseConstants
 from pages.help_page import HelpPage
 
@@ -24,12 +26,11 @@ class TestHelpPage:
             - Open start page
         - Steps:
             - Click on a FAQ menu in a site footer
-            - Go to Promocodes page
+            - Go to Promocodes questions
             - Verify information
-            - Go to Payment questions
-            -
-
+            - Go to Order questions
+            - Verifies text in order question section is visible
         """
         help_page.open_promocode_page()
-        help_page.open_payment_page()
+        help_page.open_order_page()
 

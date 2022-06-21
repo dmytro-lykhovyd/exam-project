@@ -1,5 +1,6 @@
 import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
+
 from constants.base import BaseConstants
 from pages.wishlist_page import WishlistPage
 

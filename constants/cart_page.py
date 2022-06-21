@@ -1,8 +1,10 @@
+"""constants for cart page"""
 from constants.catalog_page import CatalogPageConstants
 from constants.message_presets import MessagePresets
 
 
 class CartPageConstants(CatalogPageConstants, MessagePresets):
+    """constants for purchasing process"""
     # delivery type
     BUY_BUTTON_XPATH = ".//div[text()='Купити']"
     BUY_UNREGISTERED_BUTTON_XPATH = ".//div[text()='Покупка без реєстрації']"

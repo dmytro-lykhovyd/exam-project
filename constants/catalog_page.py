@@ -1,8 +1,9 @@
+"""constants for catalog page"""
 from constants.base import BaseConstants
 
 
 class CatalogPageConstants(BaseConstants):
-
+    """constants for searching and adding item to a cart process"""
     # man's new
     START_PAGE_MAN_XPATH = ".//a[@href='/c/vin']"
     MAN_SHOES_XPATH = ".//a[@href='/k/vin/vzuttya']"
@@ -23,7 +24,7 @@ class CatalogPageConstants(BaseConstants):
     CHOOSE_SIZE_XPATH = ".//span[text()='42']"
     CART_XPATH = ".//a[@href='/cart']"
 
-    # pop-up img
+    # for closing mailing pop-up
     POP_UP_MAILING_IMG_XPATH = ".//img[@src='https://cdn.ans-media.com/assets/front/ans/9.26.2-ans/static/media/newsletter-popup.jpg']"
     POP_UP_MAILING_CLOSE_ICON_XPATH = ".//div[@class='Modal__close__3azF3']"
 

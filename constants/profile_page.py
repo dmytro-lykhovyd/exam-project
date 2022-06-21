@@ -1,8 +1,9 @@
+"""constants for profile page"""
 from constants.base import BaseConstants
 
 
 class ProfilePageConstants(BaseConstants):
-
+    """constants for user account creation"""
     #  go to profile page
     USER_PROFILE_XPATH = ".//a[@href='/mii-akkaunt']"
 
@@ -15,10 +16,10 @@ class ProfilePageConstants(BaseConstants):
     INPUT_EMAIL_XPATH = ".//input[@maxlength='70']"
     INPUT_PASSWORD_XPATH = ".//input[@id='plaintextPassword.first']"
     INPUT_PASSWORD_REPEAT_XPATH = ".//input[@id='plaintextPassword.second']"
-
-    # TODO: catch checkbox locator:
-    TERMS_CHECKBOX_XPATH = "//*[@id='root']/main/div/div/div[2]/div[2]/div[2]/form/div[7]/div[1]/div/div/div/div/label/span/p"
-    CONFIRM_ACCOUNT_CREATION_BUTTON_XPATH = ".//button[text()='Створити Акаунт']"
+    TERMS_CHECKBOX_XPATH = "//p[text() = 'Погоджуюсь з ']"   """lead to shop's terms and conditions, unused, 
+                                                                    unable to check checkbox due to pseudoelements"""
+    ERROR_TEXT_XPATH = ".//span[text()='Будь ласка, ознайомтеся і погодьтеся з Правилами']"
+    CONFIRM_ACCOUNT_CREATION_BUTTON_XPATH = ".//div[text()='Створити Акаунт']"
 
     #  user's profile
     LOGOUT_ICON_XPATH = "//*[@id='Icon/Logout']"

@@ -10,6 +10,7 @@ def pytest_sessionstart(session):
     os.environ["PATH"] = os.environ["PATH"] + f":{os.path.abspath(BaseConstants.DRIVER_PATH)}"
 
 
+#
 # @pytest.hookimpl(hookwrapper=True)
 # def pytest_runtest_make_report(item, call):
 #     """makes screenshot when test fails"""

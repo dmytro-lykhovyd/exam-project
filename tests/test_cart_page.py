@@ -1,5 +1,6 @@
 import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
+
 from constants.base import BaseConstants
 from pages.cart_page import CartPage
 

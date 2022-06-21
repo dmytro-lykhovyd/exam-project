@@ -1,18 +1,6 @@
 import datetime
 import logging
-import random
-import string
 from time import sleep
-
-
-def random_num():
-    """Generate random number"""
-    return str(random.randint(100000, 999999))
-
-
-def random_str(length=6):
-    """Generate random string"""
-    return ''.join(random.choice(string.ascii_letters) for _ in range(length))
 
 
 def wait_until_ok(timeout: int, period: float):

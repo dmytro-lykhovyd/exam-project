@@ -31,12 +31,13 @@ class TestProfilePage:
             - Fill Email field
             - Fill Password field
             - Fill Repeat password field
+            - Do not check Terms checkbox
             - Press 'Create account' button
-            - Verify successful registration
+            - Verify error message
         """
 
         profile_page.go_to_profile_page()
         profile_page.verify_profile_page_is_open()
         profile_page.open_account_form()
         profile_page.create_account()
-        profile_page.verify_account_is_created()
+        profile_page.verify_error_message()

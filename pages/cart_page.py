@@ -1,10 +1,11 @@
+"""cart page object"""
 from constants.cart_page import CartPageConstants
 from pages.catalog_page import CatalogPage
 from pages.utils import log_wrapper
 
 
 class CartPage(CatalogPage):
-
+    """methods for cart page object"""
     def __init__(self, driver):
         super().__init__(driver)
         self.constants = CartPageConstants()
@@ -46,4 +47,4 @@ class CartPage(CatalogPage):
     @log_wrapper
     def verify_payment_is_staged(self):
         """verifies that payment can be performed with previously given credentials"""
-        assert self.wait_until_displayed(self.constants.ORDER_PAY_XPATH).is_enabled()
+        assert self.wait_until_displayed(self.constants.ORDER_PAY_XPATH).is_enabled(), "Payment is not staged"

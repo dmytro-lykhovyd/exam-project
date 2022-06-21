@@ -1,6 +1,8 @@
 import logging
+
 import pytest
 from selenium.webdriver.chrome.webdriver import WebDriver
+
 from constants.base import BaseConstants
 from pages.catalog_page import CatalogPage
 

@@ -1,3 +1,4 @@
+"""base methods for all page objects"""
 import random
 import string
 
@@ -7,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+
 from constants.base import BaseConstants
 
 
